@@ -85,7 +85,7 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO (nuevo claim + nueva imagen) -->
   <section class="bg-gradient-to-r from-amber-200 via-amber-300 to-amber-200">
     <div class="mx-auto max-w-6xl px-4 pt-10 pb-14 grid md:grid-cols-2 gap-8 items-center">
       <!-- Texto -->
@@ -96,14 +96,14 @@
         </span>
 
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
-          Tu banco tiene su oferta.<br />
+          Negociamos tu hipoteca<br />
           <span class="underline decoration-emerald-600 decoration-4 underline-offset-4">
-            Nosotros tenemos todas.
+            como si fuera la nuestra.
           </span>
         </h1>
 
         <p class="mt-4 text-sm md:text-[15px] text-slate-800 max-w-xl">
-          Comparamos bancos, hablamos en claro y te acompañamos hasta la firma. Sin letra pequeña, sin pelearte con el banco y con un único interlocutor.
+          Tú hablas con una persona. Nosotros hablamos con los bancos, comparamos ofertas y te acompañamos hasta la entrega de llaves, sin letra pequeña.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3">
@@ -120,37 +120,40 @@
         </div>
 
         <p class="mt-5 text-[11px] text-slate-900/80">
-          ¿Tienes arras o reserva firmada? <span class="font-semibold">Podemos conseguir tu hipoteca en tiempo récord.</span>
+          ¿Tienes arras o reserva firmada? <span class="font-semibold">Aceleramos plazos y coordinamos con notaría y vendedores.</span>
         </p>
       </div>
 
-      <!-- Lateral tipo móvil + casa (sin badge Hipoteca exprés) -->
+      <!-- Lateral con foto clara -->
       <div class="flex justify-center">
         <div class="relative w-full max-w-sm">
-          <!-- “móvil” -->
-          <div class="relative mx-auto h-[360px] w-[190px] rounded-[40px] border-4 border-slate-900 bg-amber-100 shadow-2xl flex items-center justify-center overflow-hidden">
-            <!-- pantalla -->
-            <div class="absolute inset-4 rounded-[28px] bg-gradient-to-b from-amber-50 to-amber-200 flex items-center justify-center">
-              <!-- casita simple -->
-              <div class="relative">
-                <div class="w-28 h-24 bg-amber-400 rounded-2xl shadow-lg mx-auto"></div>
-                <div class="w-32 h-6 bg-amber-500 rounded-t-3xl -mt-3 mx-auto shadow-lg"></div>
-                <div class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-10 h-10 rounded-full bg-slate-900/5 blur-xl"></div>
+          <div class="rounded-3xl bg-white border border-slate-100 shadow-soft overflow-hidden">
+            <div class="aspect-[4/3] w-full bg-slate-200"
+                 style="background-image:url('https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1200');background-size:cover;background-position:center;">
+            </div>
+            <div class="p-4 flex items-center justify-between text-[11px]">
+              <div>
+                <div class="text-slate-500">Acompañamiento hasta la firma</div>
+                <div class="font-semibold text-slate-900">Clientes BKC revisando su hipoteca</div>
+              </div>
+              <div class="text-right">
+                <div class="inline-flex items-center gap-1 rounded-full bg-emerald-50 text-emerald-700 px-2 py-1">
+                  <i data-lucide="star" class="h-3 w-3"></i>
+                  <span>+4,8 / 5</span>
+                </div>
+                <div class="text-[10px] text-slate-400 mt-1">Valoración media de clientes</div>
               </div>
             </div>
-
-            <!-- notch -->
-            <div class="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-3 rounded-full bg-slate-900/80"></div>
           </div>
 
-          <!-- “nube” -->
-          <div class="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 w-60 h-24 rounded-full bg-white/70 blur-2xl opacity-80"></div>
+          <!-- “nube” suave debajo -->
+          <div class="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 w-60 h-24 rounded-full bg-white/70 blur-2xl opacity-70"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BANCOS / CAJAS -->
+  <!-- BANCOS / CAJAS (con LOGOS) -->
   <section id="bancos" class="bg-white border-y border-slate-100 py-8">
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
@@ -163,28 +166,52 @@
           </h2>
         </div>
         <p class="text-xs text-slate-500 md:max-w-sm">
-          Somos independientes. Negociamos con múltiples bancos y cajas para buscar las mejores condiciones según tu perfil.
+          No pertenecemos a ningún banco. Analizamos distintas entidades para buscar las mejores condiciones según tu perfil y tu operación.
         </p>
       </div>
 
-      <!-- chips con colores de marca aproximados -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-[11px]">
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#0039A6] text-white font-medium">BBVA</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#0079C1] text-white font-medium">CaixaBank</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#EC0000] text-white font-medium">Santander</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#FF5A00] text-white font-medium">Bankinter</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#009EE0] text-white font-medium">Sabadell</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#E30613] text-white font-medium">Ibercaja</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#FF6200] text-white font-medium">ING</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#009B3A] text-white font-medium">Unicaja</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#0065A6] text-white font-medium">Abanca</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#00194A] text-white font-medium">Deutsche Bank</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#00A79D] text-white font-medium">MyInvestor</div>
-        <div class="flex items-center justify-center rounded-xl px-2 py-2 bg-[#E6007E] text-white font-medium">Openbank</div>
+      <!-- IMPORTANTE: pon aquí tus propios logos en /img/bancos/... -->
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 items-center">
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/bbva.svg" alt="BBVA" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/caixabank.svg" alt="CaixaBank" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/santander.svg" alt="Banco Santander" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/bankinter.svg" alt="Bankinter" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/sabadell.svg" alt="Banco Sabadell" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/iberCaja.svg" alt="Ibercaja" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/ing.svg" alt="ING" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/unicaja.svg" alt="Unicaja" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/abanca.svg" alt="Abanca" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/deutsche.svg" alt="Deutsche Bank" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/myinvestor.svg" alt="MyInvestor" class="max-h-7 max-w-full">
+        </div>
+        <div class="flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-3 py-2">
+          <img src="/img/bancos/openbank.svg" alt="Openbank" class="max-h-7 max-w-full">
+        </div>
       </div>
 
       <p class="mt-3 text-[10px] text-slate-400">
-        Las entidades mostradas son un ejemplo representativo. Analizamos el mercado para seleccionar las opciones que mejor encajan con tu caso.
+        Las entidades mostradas son un ejemplo representativo. En cada caso analizamos qué bancos y productos encajan mejor con tu perfil.
       </p>
     </div>
   </section>
@@ -334,7 +361,7 @@
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ (con tus preguntas, sin la de honorarios) -->
   <section id="faq" class="bg-white py-10">
     <div class="mx-auto max-w-6xl px-4">
       <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-2">
@@ -345,51 +372,59 @@
       </p>
 
       <div class="space-y-3">
+        <!-- 1. Qué es una hipoteca -->
         <details class="group rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3">
           <summary class="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold text-slate-900">
-            <span>¿Cobramos algo por hacer el estudio inicial?</span>
+            <span>¿Qué es una hipoteca o préstamo hipotecario?</span>
             <span class="shrink-0 rounded-full border border-slate-300 p-1 text-[10px] text-slate-500 group-open:rotate-90 transition">
               <i data-lucide="chevron-right" class="h-3 w-3"></i>
             </span>
           </summary>
           <div class="mt-2 text-[12px] text-slate-600">
-            No. El estudio inicial es totalmente gratuito y sin compromiso. Te explicamos qué opciones tienes y solo si decides seguir adelante formalizamos el encargo.
+            Un préstamo hipotecario es un producto financiero mediante el cual el banco te entrega una cantidad de dinero y tú te comprometes a devolverla, junto con los intereses, en cuotas periódicas según unas condiciones pactadas.
+            <br><br>
+            La característica principal es que, además de tu garantía personal, el inmueble queda como garantía adicional del pago del préstamo (la “hipoteca” sobre la vivienda).
           </div>
         </details>
 
+        <!-- 2. Tipo de vivienda -->
         <details class="group rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3">
           <summary class="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold text-slate-900">
-            <span>¿Trabajáis para el banco o para el cliente?</span>
+            <span>¿Para qué tipo de vivienda puedo solicitar la hipoteca?</span>
             <span class="shrink-0 rounded-full border border-slate-300 p-1 text-[10px] text-slate-500 group-open:rotate-90 transition">
               <i data-lucide="chevron-right" class="h-3 w-3"></i>
             </span>
           </summary>
           <div class="mt-2 text-[12px] text-slate-600">
-            Trabajamos para ti. Somos intermediarios de crédito inmobiliario independientes, inscritos en el Banco de España, y nuestra función es defender tus intereses frente a los distintos bancos.
+            Trabajamos principalmente hipotecas para comprar vivienda habitual y de inversión ya construida. La vivienda debe estar en suelo urbano (no rústico) y contar con licencia de primera ocupación o equivalente en el momento de la firma.
           </div>
         </details>
 
+        <!-- 3. Plazos firma -->
         <details class="group rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3">
           <summary class="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold text-slate-900">
-            <span>¿Cuándo se pagan vuestros honorarios?</span>
+            <span>¿Cuánto se tarda en firmar una hipoteca?</span>
             <span class="shrink-0 rounded-full border border-slate-300 p-1 text-[10px] text-slate-500 group-open:rotate-90 transition">
               <i data-lucide="chevron-right" class="h-3 w-3"></i>
             </span>
           </summary>
           <div class="mt-2 text-[12px] text-slate-600">
-            Solo cuando la operación se firma. Si finalmente no consigues hipoteca o decides no seguir adelante, no te cobramos nada.
+            Cada caso es distinto y hay factores que no dependen de nosotros (tasación, documentación, agenda de vendedores y notaría, etc.).
+            <br><br>
+            Como referencia, lo habitual es que el proceso completo tarde entre <strong>30 y 60 días</strong> aproximadamente. Si ya tienes reserva o arras firmadas, priorizamos los plazos.
           </div>
         </details>
 
+        <!-- 4. Ya tengo banco preaprobado -->
         <details class="group rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3">
           <summary class="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold text-slate-900">
-            <span>Ya tengo banco preaprobado, ¿tiene sentido que os contacte?</span>
+            <span>Ya tengo una oferta de mi banco, ¿tiene sentido que os contacte?</span>
             <span class="shrink-0 rounded-full border border-slate-300 p-1 text-[10px] text-slate-500 group-open:rotate-90 transition">
               <i data-lucide="chevron-right" class="h-3 w-3"></i>
             </span>
           </summary>
           <div class="mt-2 text-[12px] text-slate-600">
-            Sí. Podemos comparar lo que te han ofrecido con otros bancos, intentar mejorar las condiciones y ayudarte a revisar toda la documentación antes de firmar.
+            Sí. Podemos comparar lo que te han ofrecido con otros bancos, intentar mejorar las condiciones y ayudarte a revisar toda la documentación (FEIN, FIAE, escritura) antes de firmar para evitar sorpresas.
           </div>
         </details>
       </div>
