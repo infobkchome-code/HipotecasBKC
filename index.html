@@ -6,7 +6,7 @@
   <title>Hipotecas BKC · Hipotecas y Financiación</title>
   <meta name="description" content="Estudio gratuito de hipoteca. Comparamos bancos y te acompañamos hasta la firma.">
 
-  <!-- Tailwind por CDN -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,13 +15,15 @@
           colors: {
             brand: {
               primary: "#0f766e",   // verde principal
-              dark: "#064e3b",      // verde oscuro
+              dark: "#0b4f46",
               accent: "#fbbf24",    // dorado
-              light: "#f9fafb",
             }
           },
           borderRadius: {
             '3xl': '1.75rem',
+          },
+          boxShadow: {
+            soft: "0 18px 45px rgba(15,23,42,0.08)"
           }
         }
       }
@@ -39,7 +41,7 @@
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center gap-3">
-        <div class="h-9 w-9 rounded-full bg-brand.accent flex items-center justify-center text-slate-900 font-bold text-xs"
+        <div class="h-9 w-9 rounded-full flex items-center justify-center text-slate-900 font-bold text-xs"
              style="background:#fbbf24">
           BKC
         </div>
@@ -52,9 +54,9 @@
       <!-- Menú -->
       <nav class="hidden md:flex items-center gap-5 text-xs font-medium text-slate-700">
         <a href="#ventajas" class="hover:text-slate-900">Ventajas</a>
+        <a href="#bancos" class="hover:text-slate-900">Bancos</a>
         <a href="#tipos" class="hover:text-slate-900">Tipos</a>
         <a href="#simulador" class="hover:text-slate-900">Simulador</a>
-        <a href="#bancos" class="hover:text-slate-900">Bancos</a>
         <a href="#proceso" class="hover:text-slate-900">Proceso</a>
         <a href="#contacto" class="hover:text-slate-900">Contacto</a>
       </nav>
@@ -67,7 +69,7 @@
           Área clientes
         </a>
         <a href="#contacto"
-           class="hidden sm:inline-flex items-center gap-2 rounded-full bg-brand.accent px-3.5 py-1.5 text-[11px] font-semibold text-slate-900"
+           class="hidden sm:inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[11px] font-semibold text-slate-900"
            style="background:#fbbf24">
           <i data-lucide="phone" class="h-3 w-3"></i>
           Solicitar estudio
@@ -84,7 +86,7 @@
 
   <!-- HERO -->
   <section class="bg-gradient-to-b from-white to-slate-50">
-    <div class="mx-auto max-w-6xl px-4 pt-10 pb-14 grid md:grid-cols-[1.1fr,1fr] gap-8 items-start">
+    <div class="mx-auto max-w-6xl px-4 pt-10 pb-14 grid md:grid-cols-2 gap-8 items-center">
       <!-- Texto -->
       <div>
         <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-100 px-3 py-1 text-[11px] text-emerald-700 mb-4">
@@ -97,7 +99,7 @@
         </h1>
 
         <p class="mt-4 text-sm md:text-[15px] text-slate-600 max-w-xl">
-          Estudio gratuito, comparamos bancos y te acompañamos hasta la firma. Transparencia total y trato de boutique.
+          Estudio gratuito, comparamos bancos y te acompañamos hasta la firma. Transparencia total, lenguaje claro y trato de boutique.
         </p>
 
         <div class="mt-5 grid gap-2 text-xs text-slate-700">
@@ -140,119 +142,96 @@
         </p>
       </div>
 
-      <!-- Card lead -->
-      <div class="rounded-3xl bg-white border border-slate-100 shadow-sm p-5 md:p-6">
-        <div class="flex items-center gap-2 mb-3">
-          <div class="h-8 w-8 rounded-2xl bg-emerald-50 flex items-center justify-center">
-            <i data-lucide="file-text" class="h-4 w-4 text-emerald-600"></i>
+      <!-- Lateral con foto -->
+      <div class="relative">
+        <div class="rounded-3xl bg-white border border-slate-100 shadow-soft overflow-hidden">
+          <div class="aspect-[4/3] w-full bg-slate-200"
+               style="background-image:url('https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=1200');background-size:cover;background-position:center;">
           </div>
-          <div>
-            <div class="text-xs text-slate-500">Pre-filtro de viabilidad</div>
-            <div class="text-sm font-semibold text-slate-900">¿Encaja tu caso?</div>
+          <div class="p-4 flex items-center justify-between text-[11px]">
+            <div>
+              <div class="text-slate-500">Acompañamiento hasta la firma</div>
+              <div class="font-semibold text-slate-900">Broker hipotecario independiente</div>
+            </div>
+            <div class="text-right">
+              <div class="inline-flex items-center gap-1 rounded-full bg-emerald-50 text-emerald-700 px-2 py-1">
+                <i data-lucide="star" class="h-3 w-3"></i>
+                <span>+4,8 / 5</span>
+              </div>
+              <div class="text-[10px] text-slate-400 mt-1">Valoración media clientes</div>
+            </div>
           </div>
         </div>
 
-        <p class="text-[11px] text-slate-500 mb-4">
-          Déjanos unos datos básicos y te diremos si es viable y en qué bancos podrías encajar.
-        </p>
-
-        <form class="grid gap-3" onsubmit="scrollToContacto(event)">
-          <input class="rounded-xl px-3 py-2.5 border border-slate-200 bg-white text-xs text-slate-800 placeholder:text-slate-400"
-                 placeholder="Importe aproximado de la operación (€)">
-          <select class="rounded-xl px-3 py-2.5 border border-slate-200 bg-white text-xs text-slate-800">
-            <option value="">¿Para qué es la hipoteca?</option>
-            <option>Vivienda habitual</option>
-            <option>Segunda residencia</option>
-            <option>Inversión / alquiler</option>
-            <option>Subrogación / Mejora de condiciones</option>
-          </select>
-          <select class="rounded-xl px-3 py-2.5 border border-slate-200 bg-white text-xs text-slate-800">
-            <option value="">Situación laboral</option>
-            <option>Empleado por cuenta ajena</option>
-            <option>Autónomo / Empresa</option>
-            <option>Funcionario</option>
-            <option>Otro</option>
-          </select>
-          <button class="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 text-white px-4 py-2.5 text-xs font-semibold">
-            <i data-lucide="arrow-down-circle" class="h-4 w-4"></i>
-            Continuar y dejar mis datos
-          </button>
-          <p class="text-[10px] text-slate-400">
-            Solo usamos tus datos para analizar tu operación y contactarte. No enviamos spam.
-          </p>
-        </form>
+        <!-- Tarjetita flotante tipo CRM -->
+        <div class="hidden md:flex absolute -bottom-4 left-4 rounded-2xl bg-slate-900 text-slate-100 px-4 py-3 text-[11px] shadow-soft">
+          <div>
+            <div class="text-slate-400 mb-1">Expedientes en curso</div>
+            <div class="text-lg font-bold">+120</div>
+          </div>
+          <div class="w-px h-10 mx-4 bg-slate-700"></div>
+          <div class="flex flex-col justify-center gap-1">
+            <div class="inline-flex items-center gap-1">
+              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+              <span>En estudio</span>
+            </div>
+            <div class="inline-flex items-center gap-1">
+              <span class="h-2 w-2 rounded-full bg-amber-400"></span>
+              <span>En tasación / firma</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- BANCOS / CAJAS -->
-  <section id="bancos" class="bg-white border-y border-slate-100 py-10">
+  <section id="bancos" class="bg-white border-y border-slate-100 py-8">
     <div class="mx-auto max-w-6xl px-4">
-      <p class="text-[11px] font-medium text-emerald-700 mb-2 uppercase tracking-wide">
-        Bancos y cajas
-      </p>
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-5">
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">
-          Trabajamos con las principales entidades
-        </h2>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+        <div>
+          <p class="text-[11px] font-semibold text-emerald-700 uppercase tracking-wide">
+            Bancos y cajas
+          </p>
+          <h2 class="text-lg md:text-xl font-bold text-slate-900">
+            Trabajamos con las principales entidades
+          </h2>
+        </div>
         <p class="text-xs text-slate-500 md:max-w-sm">
-          Somos independientes. Negociamos con múltiples bancos y cajas para encontrar las mejores condiciones según tu perfil.
+          Somos independientes. Negociamos con múltiples bancos y cajas para buscar las mejores condiciones según tu perfil.
         </p>
       </div>
 
+      <!-- Aquí luego puedes poner logos reales -->
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-[11px] text-slate-700">
-        <!-- Aquí puedes sustituir por logos más adelante -->
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          BBVA
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          CaixaBank
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          Santander
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          Bankinter
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          Sabadell
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          Ibercaja
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          ING
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          Unicaja
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          Abanca
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          Deutsche Bank
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          MyInvestor
-        </div>
-        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">
-          Openbank
-        </div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">BBVA</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">CaixaBank</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">Santander</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">Bankinter</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">Sabadell</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">Ibercaja</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">ING</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">Unicaja</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">Abanca</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">Deutsche Bank</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">MyInvestor</div>
+        <div class="flex items-center justify-center rounded-xl border border-slate-100 bg-slate-50 px-2 py-2">Openbank</div>
       </div>
+
       <p class="mt-3 text-[10px] text-slate-400">
-        Las entidades anteriores son solo un ejemplo. Analizamos el mercado para seleccionar las opciones que mejor encajan con tu caso.
+        Las entidades mostradas son un ejemplo representativo. Analizamos el mercado para seleccionar las opciones que mejor encajan con tu caso.
       </p>
     </div>
   </section>
 
   <!-- VENTAJAS -->
-  <section id="ventajas" class="bg-slate-50 py-12">
+  <section id="ventajas" class="bg-slate-50 py-10">
     <div class="mx-auto max-w-6xl px-4">
       <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-5">
         ¿Por qué Hipotecas BKC?
       </h2>
       <div class="grid md:grid-cols-3 gap-4">
-        <div class="rounded-2xl bg-white border border-slate-100 p-4">
+        <div class="rounded-2xl bg-white border border-slate-100 p-4 shadow-sm">
           <div class="flex items-center gap-2 mb-2">
             <div class="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center">
               <i data-lucide="trending-up" class="h-4 w-4 text-emerald-600"></i>
@@ -263,7 +242,7 @@
             Comparamos distintas entidades para obtener el tipo de interés y condiciones más competitivas según tu perfil.
           </p>
         </div>
-        <div class="rounded-2xl bg-white border border-slate-100 p-4">
+        <div class="rounded-2xl bg-white border border-slate-100 p-4 shadow-sm">
           <div class="flex items-center gap-2 mb-2">
             <div class="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center">
               <i data-lucide="users" class="h-4 w-4 text-emerald-600"></i>
@@ -274,7 +253,7 @@
             Te acompañamos en todo el proceso: estudio, tasación, negociación con el banco, notaría y entrega de llaves.
           </p>
         </div>
-        <div class="rounded-2xl bg-white border border-slate-100 p-4">
+        <div class="rounded-2xl bg-white border border-slate-100 p-4 shadow-sm">
           <div class="flex items-center gap-2 mb-2">
             <div class="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center">
               <i data-lucide="shield-check" class="h-4 w-4 text-emerald-600"></i>
@@ -290,7 +269,7 @@
   </section>
 
   <!-- TIPOS -->
-  <section id="tipos" class="bg-white py-12">
+  <section id="tipos" class="bg-white py-10">
     <div class="mx-auto max-w-6xl px-4">
       <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-5">
         ¿Qué tipos de hipoteca trabajamos?
@@ -328,14 +307,14 @@
   </section>
 
   <!-- SIMULADOR -->
-  <section id="simulador" class="bg-slate-50 py-12 border-y border-slate-100">
+  <section id="simulador" class="bg-slate-50 py-10 border-y border-slate-100">
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex items-center gap-2 mb-5">
         <i data-lucide="calculator" class="h-5 w-5 text-emerald-600"></i>
         <h2 class="text-xl md:text-2xl font-bold text-slate-900">Simulador rápido de cuota</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-5">
-        <div class="rounded-2xl bg-white border border-slate-100 p-4 text-[13px]">
+        <div class="rounded-2xl bg-white border border-slate-100 p-4 text-[13px] shadow-sm">
           <label class="block text-slate-800 text-xs mb-1">
             Capital solicitado (€)
             <input id="cap" type="number" value="180000"
@@ -360,7 +339,7 @@
           </button>
         </div>
 
-        <div class="rounded-2xl bg-white border border-slate-100 p-4">
+        <div class="rounded-2xl bg-white border border-slate-100 p-4 shadow-sm">
           <div class="text-xs text-slate-500">Cuota estimada</div>
           <div id="cuota" class="mt-1 text-3xl font-extrabold text-slate-900">—</div>
           <div class="mt-4 grid grid-cols-2 gap-3 text-[12px]">
@@ -391,7 +370,7 @@
   </section>
 
   <!-- PROCESO -->
-  <section id="proceso" class="bg-white py-12">
+  <section id="proceso" class="bg-white py-10">
     <div class="mx-auto max-w-6xl px-4">
       <h2 class="text-xl md:text-2xl font-bold text-slate-900 mb-5">Cómo trabajamos</h2>
       <div class="grid md:grid-cols-4 gap-4 text-[12px]">
@@ -458,7 +437,7 @@
       </div>
 
       <!-- Formulario -->
-      <div class="rounded-2xl bg-white border border-slate-100 p-5 md:p-6">
+      <div class="rounded-2xl bg-white border border-slate-100 p-5 md:p-6 shadow-soft">
         <h3 class="text-sm font-semibold text-slate-900 mb-2">Solicita tu estudio gratuito</h3>
         <p class="text-[11px] text-slate-500 mb-4">
           Rellena el formulario y te contactaremos lo antes posible.
@@ -511,11 +490,6 @@
 
   <script>
     lucide.createIcons();
-
-    function scrollToContacto(e) {
-      e.preventDefault();
-      document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' });
-    }
 
     const eur = (n) => new Intl.NumberFormat("es-ES", {
       style: "currency",
