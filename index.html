@@ -153,85 +153,55 @@
     </div>
   </section>
 
- 
-  <!-- BANCOS / CAJAS (versión más limpia y pro) -->
-  <section id="bancos" class="bg-white border-y border-slate-100 py-10">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
-        <div>
-          <p class="text-[11px] font-semibold text-emerald-700 uppercase tracking-wide">
-            Bancos y cajas
-          </p>
-          <h2 class="text-lg md:text-xl font-bold text-slate-900">
-            Trabajamos con las principales entidades
-          </h2>
-          <p class="mt-1 text-xs text-slate-500 max-w-md">
-            No pertenecemos a ningún banco. Comparamos distintas entidades y buscamos la combinación de tipo, plazo y vinculación que mejor encaje contigo.
-          </p>
-        </div>
-        <div class="text-[11px] text-slate-500">
-          <span class="inline-flex items-center gap-1 rounded-full bg-slate-50 border border-slate-200 px-3 py-1">
-            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-            <span>Más de 10 entidades en nuestro panel</span>
-          </span>
-        </div>
-      </div>
+ <!-- BARRA DINÁMICA DE BANCOS -->
+<section id="bancos" class="bg-white border-y border-slate-100 py-8 overflow-hidden">
+  <div class="mx-auto max-w-6xl px-4 mb-4">
+    <p class="text-[11px] font-semibold text-emerald-700 uppercase tracking-wide">
+      Bancos y cajas
+    </p>
+    <h2 class="text-lg md:text-xl font-bold text-slate-900">
+      Trabajamos con las principales entidades
+    </h2>
+    <p class="mt-1 text-xs text-slate-500">
+      No pertenecemos a ningún banco. Negociamos con distintas entidades para conseguirte las mejores condiciones.
+    </p>
+  </div>
 
-      <!-- grid de logos -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center">
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/BBVA-min.png" alt="BBVA"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/Caixabank-min.png" alt="CaixaBank"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/Santander-min.png" alt="Banco Santander"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/Bankinter-min.png" alt="Bankinter"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/BSabadell_Logo-min.png" alt="Banco Sabadell"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
+  <!-- CINTA DESLIZANTE -->
+  <div class="relative">
+    <div class="flex items-center gap-8 animate-marquee w-max px-6">
+      
+      <!-- BLOQUE DE LOGOS (se repiten 2 veces para efecto infinito) -->
+      <img src="/img/bancos/BBVA-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/Caixabank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos//Santander-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/Bankinter-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/BSabadell_Logo-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/globalcaja_150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/kutxabank_-150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/Logo_Unicaja.svg.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/My-investor-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/Openbank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/logo-abancax4.png" class="h-10 opacity-80 hover:opacity-100 transition" />
 
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/globalcaja_150px-min.png" alt="Globalcaja"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/kutxabank_-150px-min.png" alt="Kutxabank"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/Logo_Unicaja.svg.png" alt="Unicaja"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/My-investor-min.png" alt="MyInvestor"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition">
-          <img src="/img/bancos/Openbank-min.png" alt="Openbank"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
+      <!-- COPIA EXACTA PARA LOOP INFINITO -->
+      <img src="/img/bancos/BBVA-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/Caixabank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/santander.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/Bankinter-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/BSabadell_Logo-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/globalcaja_150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/kutxabank_-150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/Logo_Unicaja.svg.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/My-investor-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/Openbank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+      <img src="/img/bancos/logo-abancax4.png" class="h-10 opacity-80 hover:opacity-100 transition" />
 
-        <div class="group flex items-center justify-center rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 shadow-sm hover:bg-white hover:shadow-md transition md:col-span-2">
-          <img src="/img/bancos/logo-abancax4.png" alt="Abanca"
-               class="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition" />
-        </div>
-      </div>
-
-      <p class="mt-4 text-[10px] text-slate-400">
-        Las entidades mostradas son un ejemplo representativo. En cada caso analizamos qué bancos y productos encajan mejor con tu perfil y tu operación.
-      </p>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
 
 
