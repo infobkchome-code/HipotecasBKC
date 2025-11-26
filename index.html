@@ -781,5 +781,48 @@
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+ <!-- BANNER DE COOKIES -->
+<div id="cookieBanner" class="fixed bottom-0 inset-x-0 bg-white border-t border-slate-200 shadow-lg z-50 hidden">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-[12px] text-slate-700">
+      Utilizamos cookies propias y de terceros para mejorar tu experiencia de usuario, analizar la navegación y mostrarte contenidos personalizados.
+      Puedes aceptar todas, rechazarlas o configurar tus preferencias.
+      <a href="/cookies.html" class="underline font-semibold text-slate-900">Ver política de cookies</a>.
+    </p>
+
+    <div class="flex gap-2">
+
+      <button onclick="acceptCookies()" 
+              class="rounded-full bg-emerald-600 text-white px-4 py-1.5 text-xs font-semibold">
+        Aceptar todas
+      </button>
+
+      <button onclick="rejectCookies()" 
+              class="rounded-full border border-slate-300 text-slate-700 px-4 py-1.5 text-xs font-semibold">
+        Rechazar
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function acceptCookies() {
+  localStorage.setItem("cookiesAccepted", "true");
+  document.getElementById("cookieBanner").style.display = "none";
+}
+function rejectCookies() {
+  localStorage.setItem("cookiesAccepted", "false");
+  document.getElementById("cookieBanner").style.display = "none";
+}
+function checkCookies() {
+  const choice = localStorage.getItem("cookiesAccepted");
+  if (!choice) {
+    document.getElementById("cookieBanner").style.display = "block";
+  }
+}
+document.addEventListener("DOMContentLoaded", checkCookies);
+</script>
+
 </body>
 </html>
