@@ -32,6 +32,25 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     html { scroll-behavior:smooth }
+
+    /* Barra dinámica de bancos */
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-marquee {
+      animation: marquee 25s linear infinite;
+      will-change: transform;
+    }
+
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 <body class="min-h-screen bg-slate-50 text-slate-900">
@@ -153,57 +172,53 @@
     </div>
   </section>
 
- <!-- BARRA DINÁMICA DE BANCOS -->
-<section id="bancos" class="bg-white border-y border-slate-100 py-8 overflow-hidden">
-  <div class="mx-auto max-w-6xl px-4 mb-4">
-    <p class="text-[11px] font-semibold text-emerald-700 uppercase tracking-wide">
-      Bancos y cajas
-    </p>
-    <h2 class="text-lg md:text-xl font-bold text-slate-900">
-      Trabajamos con las principales entidades
-    </h2>
-    <p class="mt-1 text-xs text-slate-500">
-      No pertenecemos a ningún banco. Negociamos con distintas entidades para conseguirte las mejores condiciones.
-    </p>
-  </div>
-
-  <!-- CINTA DESLIZANTE -->
-  <div class="relative">
-    <div class="flex items-center gap-8 animate-marquee w-max px-6">
-      
-      <!-- BLOQUE DE LOGOS (se repiten 2 veces para efecto infinito) -->
-      <img src="/img/bancos/BBVA-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/Caixabank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos//Santander-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/Bankinter-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/BSabadell_Logo-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/globalcaja_150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/kutxabank_-150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/Logo_Unicaja.svg.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/My-investor-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/Openbank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/logo-abancax4.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-
-      <!-- COPIA EXACTA PARA LOOP INFINITO -->
-      <img src="/img/bancos/BBVA-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/Caixabank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/santander.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/Bankinter-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/BSabadell_Logo-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/globalcaja_150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/kutxabank_-150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/Logo_Unicaja.svg.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/My-investor-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/Openbank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-      <img src="/img/bancos/logo-abancax4.png" class="h-10 opacity-80 hover:opacity-100 transition" />
-
+  <!-- BARRA DINÁMICA DE BANCOS -->
+  <section id="bancos" class="bg-white border-y border-slate-100 py-8 overflow-hidden">
+    <div class="mx-auto max-w-6xl px-4 mb-4">
+      <p class="text-[11px] font-semibold text-emerald-700 uppercase tracking-wide">
+        Bancos y cajas
+      </p>
+      <h2 class="text-lg md:text-xl font-bold text-slate-900">
+        Trabajamos con las principales entidades
+      </h2>
+      <p class="mt-1 text-xs text-slate-500">
+        No pertenecemos a ningún banco. Negociamos con distintas entidades para conseguirte las mejores condiciones.
+      </p>
     </div>
-  </div>
-</section>
 
+    <!-- CINTA DESLIZANTE -->
+    <div class="relative">
+      <div class="flex items-center gap-8 animate-marquee w-max px-6">
+        
+        <!-- BLOQUE DE LOGOS (se repiten 2 veces para efecto infinito) -->
+        <img src="/img/bancos/BBVA-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Caixabank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Santander-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Bankinter-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/BSabadell_Logo-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/globalcaja_150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/kutxabank_-150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Logo_Unicaja.svg.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/My-investor-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Openbank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/logo-abancax4.png" class="h-10 opacity-80 hover:opacity-100 transition" />
 
+        <!-- COPIA EXACTA PARA LOOP INFINITO -->
+        <img src="/img/bancos/BBVA-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Caixabank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Santander-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Bankinter-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/BSabadell_Logo-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/globalcaja_150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/kutxabank_-150px-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Logo_Unicaja.svg.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/My-investor-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/Openbank-min.png" class="h-10 opacity-80 hover:opacity-100 transition" />
+        <img src="/img/bancos/logo-abancax4.png" class="h-10 opacity-80 hover:opacity-100 transition" />
 
-
+      </div>
+    </div>
+  </section>
 
   <!-- VENTAJAS -->
   <section id="ventajas" class="bg-slate-50 py-10">
@@ -510,7 +525,7 @@
           <textarea id="mensaje" rows="3"
                     class="rounded-xl px-3 py-2.5 border border-slate-200 bg-white text-xs text-slate-900"
                     placeholder="Cuéntanos brevemente tu caso (opcional)"></textarea>
-          <label class="flex items-start gap-2 text-[10px] text-slate-700">
+          <label class="flex items-start gap-2 text:[10px] text-slate-700">
             <input id="acepto" type="checkbox" class="mt-0.5" required>
             <span>He leído y acepto la <a href="/privacidad.html" target="_blank" class="underline">Política de Privacidad</a>.</span>
           </label>
